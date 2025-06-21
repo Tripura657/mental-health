@@ -3,9 +3,8 @@ import google.generativeai as genai
 import os
 
 # Set up API key securely (Replace with your own key)
-API_KEY = "AIzaSyCX5TKAFYkpT3JLnEa0_alXNjwYpe_-S2E"  # Do not share this key publicly!
-genai.configure(api_key=API_KEY)
-
+ # Do not share this key publicly!
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 # Initialize the model
 model = genai.GenerativeModel('gemini-1.5-flash')
 
